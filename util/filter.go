@@ -10,17 +10,6 @@ import (
 	"time"
 )
 
-func main() {
-	filter := FilterNew()
-	err := filter.LoadWordDict("dict/dict.txt")
-	if err != nil {
-		return
-	}
-	flag, _ := filter.Validate("我操")
-	// output => false, 垃圾
-	// Do something
-	fmt.Println(flag)
-}
 func Validate() bool {
 	filter := FilterNew()
 	err := filter.LoadWordDict("dict/dict.txt")
